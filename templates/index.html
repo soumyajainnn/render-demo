@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iPhone Sale Predictor</title>
+    <style>
+        body {
+            background-color: rgba(131, 56, 115, 0.439);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        form {
+            background-color: white;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 500px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📱 iPhone Top Seller Predictor</h1>
+
+    <form action="/predict" method="post">
+        <input type="number" name="Sale Price" placeholder="Sale Price (₹)" step="0.01" required><br>
+        <input type="number" name="Mrp" placeholder="MRP (₹)" step="0.01" required><br>
+        <input type="number" name="Discount Percentage" placeholder="Discount (%)" step="0.1" required><br>
+        <input type="number" name="Ram" placeholder="RAM (GB)" required><br>
+        <button type="submit">Predict 📊</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+
+</body>
+</html>
