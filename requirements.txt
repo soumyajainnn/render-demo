@@ -1,5 +1,4 @@
-blinker==1.9.0
-click==8.2.1
+
 Flask==3.1.1
 gunicorn==23.0.0
 itsdangerous==2.2.0
@@ -8,7 +7,7 @@ joblib==1.5.1
 MarkupSafe==3.0.2
 numpy==2.0.0
 packaging==25.0
-pandas==2.2.2
+pandas==1.5.3
 python-dateutil==2.9.0.post0
 pytz==2025.2
 scikit-learn==1.5.1
